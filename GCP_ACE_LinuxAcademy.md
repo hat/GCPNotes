@@ -17,7 +17,7 @@
 * Users must be associated with Google
   * Gmail
   * Google Groups
-  * Service Accounts
+  * Service Accounts - assigned to application/service
   * G Suite
   * Cloud Identity
   * GCDS (Google Cloud Directory Sync) to link with AD or LDAP
@@ -28,6 +28,11 @@
     * Project Viewer
   * Predefined Roles: target specific use cases and precreated
   * Custom Roles: must be created manually
+* IAM heirarchy levels
+  * Organization
+  * Folders
+  * Project
+  * Resources
 
 #### Stackdriver
 
@@ -51,6 +56,12 @@
 * Stackdriver Host Project
   * If setting up Stackdriver for one project use that project specifically
   * If setting up Stackdriver for multiple projects create custom Stackdriver project
+* Stackdriver Logs
+  * Can be exported to Cloud Storage, BigQuery
+* Retention Periods
+  * Activity logs retained for 400 days
+  * Audit data access activity logs 30 days
+  * Logspast retention period are unrecoverable
 
 
 ### Managing Billing and Configuration
