@@ -42,4 +42,48 @@
     * Need to use protocols beyond HTTP/S 
     * Hybrid or multi-cloud development 
 
-* 
+* Separate access of recources
+  * VPCs
+
+* Separate access of users
+  * Projects
+
+* Kubernetes change the machine type
+  * Create new node pool in same cluster, migrate workload to new pool
+
+* Snapshots cannot be shared across projects
+  * Turn snapshot into a custom image to use in different projects
+
+* Allow acces to a GCE instance
+  * Project's project number
+  * Email address of project service account
+
+* Allow GCE instance to access other services
+  * Grant service account access to required resources
+  * Access the token via the metadata service
+
+* GCE instances default scopes allow reading from GCS, for one project bucket to read from another grant the bucket read access
+
+* Compute Engine Start-Up Procedure
+  * OS starts booting
+  * Instance considered running
+  * Gcloud them complete (unless ran with --async)
+  * Metadata service will provide startup script to OS boot process
+  * Gsutil command gets metadata like service account token
+  * Stackdriver will have a chance to push logs
+  * Startup script completes and more logs will be pushed to Stackdriver Logging
+
+* GKE nodes are GCE instances, if one dies GKE will bring another node to replace it
+
+* GCPs global by default and only individual resources live in certain location
+    so when creating a bucket you can specify region during creation then not again
+
+* App Engine Standard logging should be using the APpp Engine SDK, Stacdriver installation is configured automatically
+
+* GCE logging should be sending logs to file, install StackDriver agent on VM, configure Stackdriver to monitor and push log file
+
+* Allowed as many projects as based on your quota
+
+* Gcloud predefines machine types named by their CPU counts in powers of 2
+
+* Cloud Bigtable is most performant product for IoT and time series data
