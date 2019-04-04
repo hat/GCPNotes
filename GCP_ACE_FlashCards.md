@@ -87,3 +87,23 @@
 * Gcloud predefines machine types named by their CPU counts in powers of 2
 
 * Cloud Bigtable is most performant product for IoT and time series data
+
+* MySQL database point-in-time recover use Binary Logging
+
+* Extract IP address of Kubernetes Service: kubectl get svc -o jsonpath='{.items[*].status.loadBalancer.ingress[0].ip}'
+
+* Enable CORS on bucket: gsutil cors set
+
+* Stackdriver custom metric: create custom logging metric using regex to extract into a label
+
+* Gcloud compute instances store the SSH keys in the metadata so to add: `gcloud compute project-info add-metadata`
+
+* Each sink destination has it's own time window for saving data so may take a while to persist
+
+* Allow COmpute Engine instance to make cals to Cloud Storage and Big Table
+  * Use default Compute Engine service acount and set scopes, code find service account using 'ApplicationDefault Credentials'
+
+* gcloud info shows details about components, libraries, system details, and the log directory
+
+* To use alpha command install the alpha component
+
